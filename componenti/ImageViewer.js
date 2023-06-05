@@ -1,13 +1,15 @@
+import { StyleSheet, Image } from 'react-native';
+
 function ImageViewer({ placeholderImageSource }) {
-    return (
-      <Image source={placeholderImageSource} style={styles.image} />
-    );
-  }
-  
-  const imageStyles = StyleSheet.create({
-    image: {
-      width: 3104,
-      height: 4206,
-      borderRadius: 1600,
-    },
-  });
+  return (
+    <Image source={placeholderImageSource} style={imageStyles.image} />
+  );
+}
+
+const styles = StyleSheet.create({
+  image: {
+    width: 310,
+    height: 420,
+    borderRadius: 160,
+  },
+});

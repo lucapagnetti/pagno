@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image } from 'react-native';
-import ImageViewer from './components/ImageViewer';
+import ImageViewer from './componenti/ImageViewer';    
 
 const PlaceholderImage = require('./assets/images/luca.jpg');
 
+
 export default function App() {
   const [count, setCount] = useState(0);
+
 
   const onPress = () => {
     console.log("PROVA");
     setCount(count + 1 );
   };
+
 
   return (
     <View style={styles.container}>
@@ -24,6 +27,7 @@ export default function App() {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -48,11 +52,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function ImageViewer({ placeholderImageSource }) {
-  return (
-    <Image source={placeholderImageSource} style={styles.image} />
-  );
-}
+
 
 const imageStyles = StyleSheet.create({
   image: {
